@@ -12,16 +12,29 @@
       margin: 0;
       padding: 0;
     }
+
     .content {
+      display: flex;
+      align-items: center;  /* Tämä pitää elementit pystysuunnassa keskitettyinä */
+      justify-content: center;  /* Tämä keskittää elementit vaakasuunnassa */
+      gap: 20px; /* Lisää tilaa tekstin ja kuvan väliin */
       padding: 50px 20px;
     }
+
+    .text {
+      max-width: 500px;
+      text-align: left; /* Varmistetaan, että teksti on vasemmalla */
+    }
+
     img {
       max-width: 300px;
       border-radius: 10px;
     }
+
     audio {
       margin-top: 20px;
     }
+
     footer {
       background-color: #111;
       padding: 20px;
@@ -34,18 +47,20 @@
 </head>
 <body>
   <div class="content">
-    <h1>Milla Blanca</h1>
-    <p>Olen artisti, joka tekee musiikkia sydän auki ja filtteri pois päältä.<br> 
-    Kirjoitan sanoituksia, jotka ovat rosoisia, rehellisiä ja täynnä elämää<br>
-      – metaforamaista leikillisyyttä unohtamatta. </p>
-    
+    <div class="text">
+      <h1>Milla Blanca</h1>
+      <p>
+        Olen artisti, joka tekee musiikkia sydän auki ja filtteri pois päältä.<br> 
+        Kirjoitan sanoituksia, jotka ovat rosoisia, rehellisiä ja täynnä elämää<br>
+        – metaforamaista leikillisyyttä unohtamatta.
+      </p>
+      <h2>Kuuntele näyte:</h2>
+      <audio controls>
+        <source src="demo.mp3" type="audio/mpeg">
+        Selaimesi ei tue audiotoistoa.
+      </audio>
+    </div>
     <img src="kuva.jpg" alt="Artisti" />
-    
-    <h2>Kuuntele näyte:</h2>
-    <audio controls>
-      <source src="demo.mp3" type="audio/mpeg">
-      Selaimesi ei tue audiotoistoa.
-    </audio>
   </div>
 
   <footer>
