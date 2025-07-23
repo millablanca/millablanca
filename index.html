@@ -3,27 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <title>Milla Blanca</title>
+  <!-- Google Fonts: Whisper & Shadows Into Light -->
+  <link href="https://fonts.googleapis.com/css2?family=Whisper&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
   <style>
     body {
       background-color: #000;
       color: #fff;
-      font-family: Arial, sans-serif;
+      font-family: 'Shadows Into Light', cursive; /* Default font for body */
       text-align: center;
       margin: 0;
       padding: 0;
     }
 
+    /* Yläbanneri */
+    .banner {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-family: 'Whisper', sans-serif; /* Font for heading in banner */
+      font-size: 4em;
+      color: #fff;
+      margin: 0;
+    }
+
+    /* Content section */
     .content {
       display: flex;
-      align-items: center;  /* Tämä pitää elementit pystysuunnassa keskitettyinä */
-      justify-content: center;  /* Tämä keskittää elementit vaakasuunnassa */
-      gap: 20px; /* Lisää tilaa tekstin ja kuvan väliin */
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
       padding: 50px 20px;
     }
 
     .text {
       max-width: 500px;
-      text-align: left; /* Varmistetaan, että teksti on vasemmalla */
+      text-align: left;
+    }
+
+    h2 {
+      font-family: 'Whisper', sans-serif; /* Font for subheadings */
+      font-size: 2em;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      font-family: 'Shadows Into Light', cursive; /* Font for paragraph */
     }
 
     img {
@@ -46,9 +76,15 @@
   </style>
 </head>
 <body>
+  <!-- Yläbanneri -->
+  <div class="banner">
+    <h1>Milla Blanca</h1>
+  </div>
+
+  <!-- Content Section -->
   <div class="content">
     <div class="text">
-      <h1>Milla Blanca</h1>
+      <h2>About me:</h2>
       <p>
         Olen artisti, joka tekee musiikkia sydän auki ja filtteri pois päältä.<br> 
         Kirjoitan sanoituksia, jotka ovat rosoisia, rehellisiä ja täynnä elämää<br>
@@ -63,6 +99,7 @@
     <img src="kuva.jpg" alt="Artisti" />
   </div>
 
+  <!-- Footer -->
   <footer>
     Tavoita minut: milla.blanca@songwriter.net | puh. 046 634 7948
   </footer>
