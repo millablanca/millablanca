@@ -39,6 +39,7 @@
     /* Content section */
     .content {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       gap: 20px;
@@ -48,6 +49,7 @@
     .text {
       max-width: 500px;
       text-align: left;
+      flex: 1 1 300px;
     }
 
     h2 {
@@ -62,21 +64,40 @@
       font-family: 'Shadows Into Light', cursive;
     }
 
-    img {
-      max-width: 300px;
+    video {
+      width: 100%;
+      max-width: 400px;
       border-radius: 10px;
+      flex: 1 1 300px;
     }
 
     audio {
       margin-top: 20px;
+      width: 100%;
+    }
+
+    /* Responsiivisuus */
+    @media (max-width: 768px) {
+      .banner h1 {
+        font-size: 3em;
+      }
+      .banner p {
+        font-size: 1.2em;
+      }
+      h2 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
     }
 
     /* Footer (yhteystiedot) */
     footer {
       background-color: #111;
-      padding: 40px 20px;
+      padding: 20px;
       font-family: Arial, sans-serif;
-      font-size: 1.7em;
+      font-size: 1.2em;
       position: fixed;
       bottom: 0;
       width: 100%;
@@ -97,7 +118,7 @@
     <div class="text">
       <h2>About me:</h2>
       <p>
-        Olen artisti, joka tekee musiikkia sydän auki ja filtteri pois päältä.<br> 
+        Olen artisti, joka tekee musiikkia sydän auki ja filtteri kiinni.<br>
         Kirjoitan sanoituksia, jotka ovat rosoisia, rehellisiä ja täynnä elämää<br>
         – metaforamaista leikillisyyttä unohtamatta.
       </p>
@@ -107,12 +128,8 @@
         Selaimesi ei tue audiotoistoa.
       </audio>
     </div>
-    <img src="kuva.jpg" alt="Artisti" />
+    <video autoplay muted loop playsinline>
+      <source src="video.mp4" type="video/mp4">
+      Selaimesi ei tue videotoistoa.
+    </video>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    Tavoita minut: milla.blanca@songwriter.net | puh. 046 634 7948
-  </footer>
-</body>
-</html>
