@@ -50,6 +50,15 @@
       max-width: 500px;
       text-align: left;
       flex: 1 1 300px;
+      order: 1; /* oletus: teksti ensin */
+    }
+
+    video {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      flex: 1 1 300px;
+      order: 2; /* oletus: video toisena */
     }
 
     h2 {
@@ -64,22 +73,15 @@
       font-family: 'Shadows Into Light', cursive;
     }
 
-    video {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
-      flex: 1 1 300px;
-    }
-
     audio {
       margin-top: 20px;
       width: 100%;
       max-width: 400px;
-      height: 40px; 
+      height: 40px; /* pakotettu korkeus */
       box-sizing: border-box;
     }
 
-    /* Responsiivisuus */
+    /* Mobiiliversio: vaihdetaan järjestys */
     @media (max-width: 768px) {
       .banner h1 {
         font-size: 3em;
@@ -93,14 +95,21 @@
       p {
         font-size: 1em;
       }
+      /* Teksti + audio ensin, video alle */
+      .text {
+        order: 1;
+      }
+      video {
+        order: 2;
+      }
     }
 
     /* Footer (yhteystiedot) */
     footer {
       background-color: #111;
       padding: 20px;
-      font-family: 'Shadows Into Light', cursive;
-      font-size: 2.5em; /* Sama kuin h2 */
+      font-family: Arial, sans-serif; /* säilytetään alkuperäinen */
+      font-size: 2.5em; /* sama kuin h2 */
       position: fixed;
       bottom: 0;
       width: 100%;
@@ -119,13 +128,13 @@
   <!-- Content Section -->
   <div class="content">
     <div class="text">
-      <h2>Kuka olen:</h2>
+      <h2>Kuka?</h2>
       <p>
         Olen artisti, joka tekee musiikkia sydän auki ja filtteri kiinni.<br>
         Kirjoitan sanoituksia, jotka ovat rosoisia, rehellisiä ja täynnä elämää<br>
         – metaforamaista leikillisyyttä unohtamatta.
       </p>
-      <h2>Kuuntele näyte:</h2>
+      <h2>Kuuntele:</h2>
       <audio controls>
         <source src="demo2.mp3" type="audio/mpeg">
         Selaimesi ei tue audiotoistoa.
