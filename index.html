@@ -39,18 +39,17 @@
     /* Content section */
     .content {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       gap: 20px;
       padding: 50px 20px;
+      flex-wrap: wrap;
     }
 
     .text {
       max-width: 500px;
       text-align: left;
       flex: 1 1 300px;
-      order: 1; /* oletus: teksti ensin */
     }
 
     video {
@@ -58,7 +57,6 @@
       max-width: 400px;
       border-radius: 10px;
       flex: 1 1 300px;
-      order: 2; /* oletus: video toisena */
     }
 
     h2 {
@@ -77,25 +75,17 @@
       margin-top: 20px;
       width: 100%;
       max-width: 400px;
-      height: 40px; /* pakotettu korkeus */
+      height: 40px; /* Pakotettu korkeus */
       box-sizing: border-box;
+      display: block; /* Estää flex-leikkauksen */
     }
 
-    /* Mobiiliversio: vaihdetaan järjestys */
+    /* Mobiili: pakotetaan sisältö pinoon */
     @media (max-width: 768px) {
-      .banner h1 {
-        font-size: 3em;
+      .content {
+        flex-direction: column;
+        align-items: center;
       }
-      .banner p {
-        font-size: 1.2em;
-      }
-      h2 {
-        font-size: 2em;
-      }
-      p {
-        font-size: 1em;
-      }
-      /* Teksti + audio ensin, video alle */
       .text {
         order: 1;
       }
@@ -108,8 +98,8 @@
     footer {
       background-color: #111;
       padding: 20px;
-      font-family: Arial, sans-serif; /* säilytetään alkuperäinen */
-      font-size: 2.5em; /* sama kuin h2 */
+      font-family: Arial, sans-serif;
+      font-size: 2.5em; /* Sama kuin h2 */
       position: fixed;
       bottom: 0;
       width: 100%;
